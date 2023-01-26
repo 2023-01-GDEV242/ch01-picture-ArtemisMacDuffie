@@ -11,10 +11,17 @@
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
-    private Circle sun;
+    private Square engine;
+    private Square bed1;
+    private Square bed2;
+    private Triangle cabin;
+    private Square cabinFloor1;
+    private Square cabinFloor2;
+    private Triangle window;
+    private Circle wheel1;
+    private Circle wheel2;
+    private Person pass1;
+    private Person pass2;
     private boolean drawn;
 
     /**
@@ -22,10 +29,17 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
-        sun = new Circle();
+        engine = new Square();
+        bed1 = new Square();
+        bed2 = new Square();
+        cabin = new Triangle();
+        cabinFloor1 = new Square();
+        cabinFloor2 = new Square();
+        window = new Triangle();
+        wheel1 = new Circle();
+        wheel2 = new Circle();
+        pass1 = new Person();
+        pass2 = new Person();
         drawn = false;
     }
 
@@ -35,27 +49,23 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
+            engine.changeColor("red");
+            engine.moveHorizontal(-275);
+            engine.moveVertical(40);
+            engine.changeSize(100);
+            engine.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
-    
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
-    
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
+            cabin.changeColor("red");
+            cabin.changeSize(125, 250);
+            cabin.moveHorizontal(-25);
+            cabin.moveVertical(-50);
+            cabin.makeVisible();
+            
+            cabinFloor1.changeColor("red");
+            cabinFloor1.moveHorizontal(-175);
+            cabinFloor1.moveVertical(75);
+            cabinFloor1.makeVisible();
+            
             drawn = true;
         }
     }
@@ -65,10 +75,8 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
-        sun.changeColor("black");
+        engine.changeColor("black");
+        
     }
 
     /**
@@ -76,9 +84,7 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
-        sun.changeColor("yellow");
+        engine.changeColor("red");
+        
     }
 }
