@@ -98,12 +98,12 @@ public class Picture
             bed2.changeSize(100);
             bed2.makeVisible();
             
-            wheel1.changeColor("black");
+            wheel1.changeColor("grey");
             wheel1.moveHorizontal(-125);
             wheel1.moveVertical(125);
             wheel1.makeVisible();
             
-            wheel2.changeColor("black");
+            wheel2.changeColor("grey");
             wheel2.moveHorizontal(110);
             wheel2.moveVertical(125);            
             wheel2.makeVisible();
@@ -118,7 +118,16 @@ public class Picture
     public void setBlackAndWhite()
     {
         engine.changeColor("black");
-        
+        cabin.changeColor("black");
+        cabinFloor1.changeColor("black");
+        cabinFloor2.changeColor("black");
+        pass1.changeColor("black");
+        pass2.changeColor("black");
+        window.changeColor("white");
+        bed1.changeColor("black");
+        bed2.changeColor("black");
+        wheel1.changeColor("white");
+        wheel2.changeColor("white");
     }
 
     /**
@@ -127,6 +136,15 @@ public class Picture
     public void setColor()
     {
         engine.changeColor("red");
-        
+        cabin.changeColor("red");
+        cabinFloor1.changeColor("red");
+        cabinFloor2.changeColor("red");
+        pass1.changeColor("black");
+        pass2.changeColor("black");
+        window.changeColor("blue");
+        bed1.changeColor("red");
+        bed2.changeColor("red");
+        wheel1.changeColor("grey");
+        wheel2.changeColor("grey");
     }
 }
